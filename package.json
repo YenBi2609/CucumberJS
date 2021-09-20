@@ -1,0 +1,29 @@
+{
+  "name": "js-cucumber-selenium",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/testcookbook/js-cucumber-selenium.svg?branch=master)](https://travis-ci.org/testcookbook/js-cucumber-selenium)",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testcookbook/js-cucumber-selenium.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/testcookbook/js-cucumber-selenium/issues"
+  },
+  "homepage": "https://github.com/testcookbook/js-cucumber-selenium#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "chromedriver": "^2.24.1",
+    "geckodriver": "^1.1.3"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "cucumber": "^1.3.3",
+    "selenium-webdriver": "^3.6.0"
+  }
+}
