@@ -1,14 +1,16 @@
-var seleniumWebdriver = require('selenium-webdriver');
-//var firefox = require('selenium-webdriver/firefox');
-//var chrome = require('selenium-webdriver/chrome');
+const seleniumWebdriver = require('selenium-webdriver');
+const {setWorldConstructor, setDefaultTimeout} = require('@cucumber/cucumber');
+const {timeout, browser} = require('../../config');
 
-function CustomWorld() {
-  this.driver = new seleniumWebdriver.Builder()
-                  .forBrowser('firefox')
-                  .build();
+class CustomWorld {
+  constructor() {
+
+    this.driver = new seleniumWebdriver
+      .Builder()
+      .forBrowser(browser)
+      .build();
+  }
 }
 
-module.exports = function() {
-  this.World = CustomWorld;
-  this.setDefaultTimeout(30 * 1000);
-};
+setDefaultTimeout(timeout);
+setWorldConstructor(CustomWorld);
