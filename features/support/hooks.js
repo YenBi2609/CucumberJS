@@ -1,7 +1,7 @@
 const {Before, After} = require('@cucumber/cucumber');
 
-Before(function() {
-  return this.driver.manage().window().maximize();
+Before(async function() {
+  return await this.driver.manage().window().maximize();
 });
 
 After(function() {
